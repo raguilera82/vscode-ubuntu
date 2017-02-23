@@ -3,6 +3,24 @@
 
 - name: download vscode
   get_url:
-    url: https://go.microsoft.com/fwlink/?LinkID=760868
-    dest: vscode.deb
-    mode: 0440
+    url: "https://go.microsoft.com/fwlink/?LinkID=760868"
+    dest: "/home/vagrant/vscode.deb"
+
+- name: Install vscode
+  apt: deb="/home/vagrant/vscode.deb"
+  sudo: true
+
+- name: Remove vscode.deb package
+  file:
+    path: "/home/vagrant/vscode.deb"
+    state: absent
+
+- name: Install extensions
+  shell:  code --install-extension {{ item }}
+  become: false
+  with_items:
+    - eg2.tslint
+    - steoates.autoimport
+    - robertohuertasm.vscode-icons
+    - jvitor83.types-autoinstaller
+    - msjsdiag.debugger-for-chrome 
