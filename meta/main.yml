@@ -1,6 +1,6 @@
 galaxy_info:
   author: Rubén Aguilera
-  description: 
+  description: Ansible role to install vscode into Ubuntu
   company: 
   
   # If the issue tracker for your role is not on github, uncomment the
