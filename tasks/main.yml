@@ -1,0 +1,8 @@
+---
+# tasks file for vscode-ubuntu
+
+- name: download vscode
+  get_url:
+    url: https://go.microsoft.com/fwlink/?LinkID=760868
+    dest: vscode.deb
+    mode: 0440
