@@ -8,7 +8,7 @@
 
 - name: Install vscode
   apt: deb="/home/vagrant/vscode.deb"
-  sudo: true
+  become: true
 
 - name: Remove vscode.deb package
   file:
