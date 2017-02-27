@@ -1,2 +1,9 @@
 ---
 # defaults file for vscode-ubuntu
+
+extensions:
+- eg2.tslint
+- steoates.autoimport
+- robertohuertasm.vscode-icons
+- jvitor83.types-autoinstaller
+- msjsdiag.debugger-for-chrome

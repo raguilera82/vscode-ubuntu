@@ -18,9 +18,4 @@
 - name: Install extensions
   shell:  code --install-extension {{ item }}
   become: false
-  with_items:
-    - eg2.tslint
-    - steoates.autoimport
-    - robertohuertasm.vscode-icons
-    - jvitor83.types-autoinstaller
-    - msjsdiag.debugger-for-chrome 
+  with_items: "{{ extensions }}"
